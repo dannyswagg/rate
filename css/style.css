@@ -1129,7 +1129,8 @@ i {
 }
 
 .login-section {
-  padding: 100px 0;
+  margin: 150px 0;
+  height: 100vh;
 }
 
 .login-section form {
