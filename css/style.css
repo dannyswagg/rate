@@ -3349,10 +3349,14 @@ footer a {
   color: white;
   text-decoration: none;
   transition: all 0.3s;
-} 
+}
 footer {
   background: #000 !important;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
-main{
-height: 100vh;
+
+main {
+  height: 100%;
 }
