@@ -3053,7 +3053,7 @@ div[class*="col"]:nth-of-type(4n + 1) .dashboard__card-icon {
 }
 @media (max-width: 414px) {
   .login-section form {
-    padding: 0;
+    padding: 20px;
     max-width: 100%;
   }
   /* .login-section {
