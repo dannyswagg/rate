@@ -67,51 +67,80 @@
         <div class="container">
           <div class="row auth-box">
             <div class="col">
-              <form action="#">
+              <form>
                 <div class="row g-4">
                   <div class="col-12">
-                    <h4>Amount to pay</h4>
-                    <h3 class="text-center">11,475.00</h3>
-                    <hr />
-                    <p class="text-center">
-                      Amount: 11,475.00 <span>|</span> Fee: 0.00
-                    </p>
-                    <div class="d-flex justify-content-between">
-                      <p>
-                        <i
-                          class="fas fa-location-arrow"
-                          style="color: #fff"
-                        ></i>
-                        Pay with Transfer
-                      </p>
-                      <p>SWITCH</p>
-                    </div>
-                    <h5 class="text-center">Transfer to account below</h5>
-                    <div class="text-center">
-                      <h6 class="text-white fw-bold">Wema Bank</h6>
-                      <h4>9275555631</h4>
-                      <p>Do not save this account no!</p>
-                      <p>Account Name</p>
-                      <h5>LEADS GLOBE-JAM</h5>
-                      <hr />
-                      <div
-                        style="font-size: 0.8rem"
-                        class="d-flex justify-content-between"
-                      >
-                        <p>This one-time account expires in</p>
-                        <p>50mins 30 secs</p>
-                      </div>
-                    </div>
+                    <h4>Verify Phone Number</h4>
                   </div>
-
+                  <div class="text-center">
+                    <i
+                      class="fas fa-comments fa-lg mx-auto"
+                      style="color: #0756df"
+                    ></i>
+                    <h5 class="text-center" style="font-size: 1rem">
+                      Enter the code sent to <span>+2348130478924</span>
+                    </h5>
+                  </div>
+                  <div class="inputContainer">
+                    <input
+                      required="required"
+                      maxlength="1"
+                      type="text"
+                      class="otp-input"
+                      id="otp-input1"
+                    />
+                    <input
+                      required="required"
+                      maxlength="1"
+                      type="text"
+                      class="otp-input"
+                      id="otp-input2"
+                    />
+                    <input
+                      required="required"
+                      maxlength="1"
+                      type="text"
+                      class="otp-input"
+                      id="otp-input3"
+                    />
+                    <input
+                      required="required"
+                      maxlength="1"
+                      type="text"
+                      class="otp-input"
+                      id="otp-input4"
+                    />
+                    <input
+                      required="required"
+                      maxlength="1"
+                      type="text"
+                      class="otp-input"
+                      id="otp-input4"
+                    />
+                    <input
+                      required="required"
+                      maxlength="1"
+                      type="text"
+                      class="otp-input"
+                      id="otp-input4"
+                    />
+                  </div>
+                  <p class="text-center text-white">
+                    Resend code in <span id="timer">00:00</span> seconds.
+                  </p>
                   <div class="col-12"></div>
                 </div>
-
                 <button type="submit" class="btn-ico text-white">
-                  I have Transferred The Money
+                  Continue
                 </button>
                 <div class="bottom">
-                  <a href="#">Get your bank USSD code</a>
+                  <a style="color: #fff" href="#">
+                    <i
+                      class="fas fa-arrow-left fa-sm"
+                      style="color: #fff; margin-right: 3px"
+                    ></i
+                    >Back</a
+                  >
                 </div>
               </form>
             </div>
@@ -182,5 +211,54 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/"></script>
+    <script>
+      // Set the target time for the countdown (in seconds)
+      const targetTimeInSeconds = 1200; // Change this to your desired countdown time
+
+      // Calculate the initial minutes and seconds
+      let minutes = Math.floor(targetTimeInSeconds / 60);
+      let seconds = targetTimeInSeconds % 60;
+
+      // Display the initial countdown value
+      updateTimerDisplay();
+
+      // Create a countdown function
+      function startCountdown() {
+        const countdownInterval = setInterval(function () {
+          // Decrement the seconds
+          seconds--;
+
+          // Check if we need to decrement the minutes
+          if (seconds < 0) {
+            seconds = 59;
+            minutes--;
+          }
+
+          // Update the timer display
+          updateTimerDisplay();
+
+          // Check if the countdown has reached zero
+          if (minutes === 0 && seconds === 0) {
+            clearInterval(countdownInterval); // Stop the countdown
+            alert("Countdown complete!"); // You can replace this with your desired action when the countdown finishes
+          }
+        }, 1000); // Update every 1 second (1000 milliseconds)
+      }
+
+      // Function to update the timer display
+      function updateTimerDisplay() {
+        // Format the minutes and seconds as two digits
+        const formattedMinutes = String(minutes).padStart(2, "0");
+        const formattedSeconds = String(seconds).padStart(2, "0");
+
+        // Display the time in the timer element
+        document.getElementById(
+          "timer"
+        ).textContent = `${formattedMinutes}:${formattedSeconds}`;
+      }
+
+      // Start the countdown when the page loads (you can start it based on a user action, e.g., button click)
+      startCountdown();
+    </script>
   </body>
 </html>

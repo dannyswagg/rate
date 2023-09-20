@@ -1208,7 +1208,7 @@ i {
 }
 
 .login-section form .input-box .form-select {
-  background-image: url(../images/icon/downward-arrow.png);
+  background-image: url(../assests/down-arrow.png);
   border: 2px solid transparent;
 }
 
@@ -3360,4 +3360,13 @@ footer {
 
 main {
   height: 100%;
+}
+.list {
+  list-style-type: none;
+  background: #09071c;
+  padding: 15px;
+  border-radius: 5px;
+}
+.lists {
+  color: #0361f0;
 }

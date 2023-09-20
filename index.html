@@ -113,18 +113,13 @@
                           <input
                             type="text"
                             step="any"
-                            name="sendAmount"
                             class="form-control inputAmount"
                             placeholder="1"
                           />
                           <p class="text-danger minMax"></p>
                         </div>
                         <div>
-                          <select
-                            class="form-select"
-                            id="send"
-                            name="sendCurrency"
-                          >
+                          <select class="form-select" id="send">
                             <option value="1">Bitcoin</option>
                             <option value="2">Naira</option>
                             <option value="3">USDT-TRC20</option>
@@ -137,18 +132,13 @@
                           <input
                             type="number"
                             step="any"
-                            name="receiveAmount"
                             class="form-control getAmount"
                             readonly=""
                             placeholder="0.00"
                           />
                         </div>
                         <div>
-                          <select
-                            class="form-select"
-                            id="receive"
-                            name="receiveCurrency"
-                          >
+                          <select class="form-select" id="receive">
                             <option value="1">Bitcoin</option>
                             <option value="2">Naira</option>
                             <option value="3">USDT-TRC20</option>
